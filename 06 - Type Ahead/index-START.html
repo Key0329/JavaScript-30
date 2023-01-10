@@ -42,8 +42,8 @@
 
       matchArray.forEach(place => {
         const regex = new RegExp(e.target.value, 'gi');
-        const cityName = place.city.replace(regex, `<span class="h1">${e.target.value}</span>`);
-        const stateName = place.state.replace(regex, `<span class="h1">${e.target.value}</span>`);
+        const cityName = place.city.replace(regex, `<span class="hl">${e.target.value}</span>`);
+        const stateName = place.state.replace(regex, `<span class="hl">${e.target.value}</span>`);
 
 
         str += `
@@ -53,6 +53,8 @@
         </li>
         `
       })
+
+      console.log(str);
 
       suggestions.innerHTML = str;
     }
